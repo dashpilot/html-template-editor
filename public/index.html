@@ -14,6 +14,10 @@
 		const inline_editor = 'h1,h2,h3,h4,h5,p';
 		const img_width = 800;
 		const page_id = 'page';
+
+		function save(html) {
+			alert(html);
+		}
 	</script>
 	<link rel='stylesheet' href='/global.css'>
 	<link rel='stylesheet' href='/build/bundle.css'>
@@ -85,6 +89,8 @@
 		</div>
 	</div>
 
+	<!-- Content Blocks that the user can add to the page -->
+
 	<template id="features" data-name="Features" data-insert="main">
 		<section class="layout-features">
 			<div class="container editable" id="item-2">
@@ -122,7 +128,7 @@
 		<section class="layout-post">
 			<div id="item-4" class="container editable">
 				<h2>Mauris eleifend ligula</h2>
-				Vivamus in nisi commodo, auctor magna vel, viverra turpis. Quisque dapibus risus nec justo euismod, id fringilla dui lobortis. Mauris vitae semper arcu. Ut ac lorem felis.
+				<p>Vivamus in nisi commodo, auctor magna vel, viverra turpis. Quisque dapibus risus nec justo euismod, id fringilla dui lobortis. Mauris vitae semper arcu. Ut ac lorem felis.</p>
 			</div>
 		</section>
 	</template>

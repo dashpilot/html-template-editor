@@ -776,7 +776,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (62:0) {#if showAdd}
+    // (66:0) {#if showAdd}
     function create_if_block_1(ctx) {
     	let div1;
     	let span;
@@ -812,16 +812,16 @@ var app = (function () {
     			}
 
     			attr_dev(span, "class", "wdgt-title");
-    			add_location(span, file, 63, 2, 1833);
+    			add_location(span, file, 67, 2, 1905);
     			attr_dev(a, "class", "close-it");
     			attr_dev(a, "data-close", "wdgt-add");
     			attr_dev(a, "id", "close-add");
-    			add_location(a, file, 64, 2, 1886);
+    			add_location(a, file, 68, 2, 1958);
     			attr_dev(div0, "class", "wdgt-content");
     			attr_dev(div0, "id", "add-content");
-    			add_location(div0, file, 65, 2, 1992);
+    			add_location(div0, file, 69, 2, 2064);
     			attr_dev(div1, "class", "pane pane-left");
-    			add_location(div1, file, 62, 1, 1775);
+    			add_location(div1, file, 66, 1, 1847);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -895,14 +895,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(62:0) {#if showAdd}",
+    		source: "(66:0) {#if showAdd}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (67:2) {#each templates as item}
+    // (71:2) {#each templates as item}
     function create_each_block(ctx) {
     	let a;
     	let t_value = /*item*/ ctx[10].name + "";
@@ -919,7 +919,7 @@ var app = (function () {
     			a = element("a");
     			t = text(t_value);
     			attr_dev(a, "class", "box");
-    			add_location(a, file, 67, 2, 2066);
+    			add_location(a, file, 71, 2, 2138);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, a, anchor);
@@ -944,14 +944,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(67:2) {#each templates as item}",
+    		source: "(71:2) {#each templates as item}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (74:0) {#if showSet}
+    // (78:0) {#if showSet}
     function create_if_block(ctx) {
     	let div1;
     	let span;
@@ -976,16 +976,16 @@ var app = (function () {
     			div0 = element("div");
     			div0.textContent = "Coming soon";
     			attr_dev(span, "class", "wdgt-title");
-    			add_location(span, file, 75, 1, 2238);
+    			add_location(span, file, 79, 1, 2310);
     			attr_dev(a, "class", "close-it");
     			attr_dev(a, "data-close-right", "wdgt-settings");
     			attr_dev(a, "id", "close-settings");
-    			add_location(a, file, 76, 1, 2280);
+    			add_location(a, file, 80, 1, 2352);
     			attr_dev(div0, "class", "wdgt-content");
     			attr_dev(div0, "id", "settings-content");
-    			add_location(div0, file, 77, 1, 2401);
+    			add_location(div0, file, 81, 1, 2473);
     			attr_dev(div1, "class", "pane pane-right");
-    			add_location(div1, file, 74, 0, 2181);
+    			add_location(div1, file, 78, 0, 2253);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -1029,7 +1029,7 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(74:0) {#if showSet}",
+    		source: "(78:0) {#if showSet}",
     		ctx
     	});
 
@@ -1087,23 +1087,23 @@ var app = (function () {
     			attr_dev(img0, "data-open", "wdgt-add");
     			attr_dev(img0, "class", "exclude");
     			attr_dev(img0, "alt", "add");
-    			add_location(img0, file, 56, 1, 1430);
+    			add_location(img0, file, 60, 1, 1499);
     			if (img1.src !== (img1_src_value = "/img/save.png")) attr_dev(img1, "src", img1_src_value);
     			attr_dev(img1, "id", "save");
     			attr_dev(img1, "class", "exclude");
     			attr_dev(img1, "alt", "save");
-    			add_location(img1, file, 57, 1, 1539);
+    			add_location(img1, file, 61, 1, 1608);
     			if (img2.src !== (img2_src_value = "/img/settings.png")) attr_dev(img2, "src", img2_src_value);
     			attr_dev(img2, "data-open-right", "wdgt-settings");
     			attr_dev(img2, "class", "exclude");
     			attr_dev(img2, "alt", "settings");
-    			add_location(img2, file, 58, 1, 1623);
+    			add_location(img2, file, 62, 1, 1695);
     			attr_dev(div, "id", "dock");
-    			add_location(div, file, 55, 0, 1413);
+    			add_location(div, file, 59, 0, 1482);
     			set_custom_element_data(deckgo_inline_editor, "containers", inline_editor);
     			set_custom_element_data(deckgo_inline_editor, "background-color", "false");
     			set_custom_element_data(deckgo_inline_editor, "align", "false");
-    			add_location(deckgo_inline_editor, file, 83, 0, 2492);
+    			add_location(deckgo_inline_editor, file, 87, 0, 2564);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1130,7 +1130,7 @@ var app = (function () {
     			if (!mounted) {
     				dispose = [
     					listen_dev(img0, "click", /*click_handler*/ ctx[4], false, false, false),
-    					listen_dev(img1, "click", save, false, false, false),
+    					listen_dev(img1, "click", preSave, false, false, false),
     					listen_dev(img2, "click", /*click_handler_1*/ ctx[5], false, false, false)
     				];
 
@@ -1237,10 +1237,16 @@ var app = (function () {
     	});
     }
 
-    function save() {
+    function preSave() {
     	disableEditing();
     	let html = document.getElementById(page_id).innerHTML.replace(/\s{2,}/g, "");
-    	alert(html);
+
+    	if (typeof save !== "undefined") {
+    		save(html);
+    	} else {
+    		alert(html);
+    	}
+
     	enableEditing();
     }
 
@@ -1297,7 +1303,7 @@ var app = (function () {
     		disableEditing,
     		loadTemplates,
     		addItem,
-    		save
+    		preSave
     	});
 
     	$$self.$inject_state = $$props => {

@@ -45,17 +45,21 @@ function addItem(id){
 	showAdd = false;
 }
 
-function save(){
+function preSave(){
 	disableEditing();
 	let html = document.getElementById(page_id).innerHTML.replace(/\s{2,}/g, '');
-	alert(html);
+  if (typeof save !== "undefined") {
+	save(html);
+  }else{
+    alert(html);
+  }
 	enableEditing();
 }
 </script>
 
 <div id="dock">
 	<img src="/img/add.png" data-open="wdgt-add" class="exclude" alt="add" on:click="{() => showAdd = true}" />
-	<img src="/img/save.png" id="save" class="exclude" alt="save" on:click="{save}" />
+	<img src="/img/save.png" id="save" class="exclude" alt="save" on:click="{preSave}" />
 	<img src="/img/settings.png" data-open-right="wdgt-settings" class="exclude" alt="settings" on:click="{() => showSet = true}" />
 </div>
 
