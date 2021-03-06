@@ -1,33 +1,31 @@
 # html-template-editor
+
 Make any HTML template editable!
 
 Simple on-page editor that features inline-editing, image upload and resize, adding/sorting/removing template blocks. Easy to integrate into any HTML template and independant of CSS frameworks (Can be used with Bootstrap/Tailwind/Uikit/Bulma/Custom CSS/etc).
 
 ## Demo
-https://html-template-editor.vercel.app/
+
+<https://html-template-editor.vercel.app/>
 
 ## How to
 
 Integrate the editor with any existing HTML template by adding the following to the head of each page:
 
-```
-<script>
-  const inline_editor = 'h1,h2,h3,h4,h5,p'; // which element should be inline-editable
-  const img_width = 800; // resize images to this width
-  const page_id = 'page'; // id of the div that contains the page's contents, see below
-</script>
+    <script>
+      const inline_editor = 'h1,h2,h3,h4,h5,p'; // which element should be inline-editable
+      const img_width = 800; // resize images to this width
+      const page_id = 'page'; // id of the div that contains the page's contents, see below
+    </script>
 
-<link rel='stylesheet' href='/global.css'>
-<script defer src='/build/bundle.js'></script>
-```
+    <link rel='stylesheet' href='/global.css'>
+    <script defer src='/build/bundle.js'></script>
 
 Wrap the part of the page that you want to save in a div with an id of `page`:
 
-```
-<div id="page">
-  <!-- This part will be saved -->
-</div>
-```
+    <div id="page">
+      <!-- This part will be saved -->
+    </div>
 
 That's all! No further changes required!
 
@@ -38,18 +36,39 @@ To create your own content blocks, just wrap your custom HTML in a 'template'-ta
 `data-name`: The name of the content block as it should appear in the interface
 `data-insert`: the wrapper element the content block should be inserted into
 
-```
-<template id="post" data-name="Post" data-insert="main">
+    <template id="post" data-name="Post" data-insert="main">
 
-    	<!-- Your custom content-block -->
-	<section class="layout-post">
-		<div id="item-4" class="container editable">
-			<h2>Mauris eleifend ligula</h2>
-			<p>Vivamus in nisi commodo, auctor magna vel, viverra turpis.<p>
-		</div>
-	</section>
-    
-</template>
-```
+        	<!-- Your custom content-block -->
+    	<section class="layout-post">
+    		<div id="item-4" class="container editable">
+    			<h2>Mauris eleifend ligula</h2>
+    			<p>Vivamus in nisi commodo, auctor magna vel, viverra turpis.<p>
+    		</div>
+    	</section>
 
-Check out the example on: https://html-template-editor.vercel.app/ to see how it all works together
+    </template>
+
+Check out the example on: <https://html-template-editor.vercel.app/> to see how it all works together
+
+## Backend
+
+The editor (currently?) has no back-end, but exposes a 'save'-function so you can easily integrate your own prefered back-end. To save data to your own back-end, just create a save-function that takes the html as a parameter, for example:
+
+    function save(html){
+
+      // validate user and validate data
+      // ...
+
+      // then save to you backend
+      var opts = {};
+      opts.html = html;
+      fetch('/path/to/your/api', {
+        method: 'post',
+        body: JSON.stringify(opts)
+      }).then(function(response) {
+        return response.json();
+      }).then(function(data) {
+        console.log('Saved.');
+      });
+
+    }
