@@ -41,13 +41,13 @@ To create your own content blocks, just wrap your custom HTML in a 'template'-ta
 ```
 <template id="post" data-name="Post" data-insert="main">
 
-    <!-- Your custom content-block -->
-		<section class="layout-post">
-			<div id="item-4" class="container editable">
-				<h2>Mauris eleifend ligula</h2>
-				Vivamus in nisi commodo, auctor magna vel, viverra turpis.
-			</div>
-		</section>
+    	<!-- Your custom content-block -->
+	<section class="layout-post">
+		<div id="item-4" class="container editable">
+			<h2>Mauris eleifend ligula</h2>
+			<p>Vivamus in nisi commodo, auctor magna vel, viverra turpis.<p>
+		</div>
+	</section>
     
 </template>
 ```
