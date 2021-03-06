@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+
+	<title>Svelte app</title>
+
+	<link rel='icon' type='image/png' href='/favicon.png'>
+
+	<script>
+		/* config */
+		const inline_editor = 'h1,h2,h3,h4,h5,p';
+		const img_width = 800;
+		const page_id = 'page';
+	</script>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+	<script defer src='/build/bundle.js'></script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+	<div id="page">
+
+		<header>
+
+			<section class="text-center layout-banner">
+				<div class="container editable" id="item-1">
+					<i class="fas fa-crown fa-big"></i>
+					<h1>Sitefiction</h1>
+					<p>Lorem ipsum dolor site amet</p>
+					<a class="btn btn-secondary">Contact Us</a>
+				</div>
+			</section>
+
+		</header>
+
+		<div id="main">
+
+			<section class="layout-features">
+				<div class="container editable" id="item-2">
+					<div class="row">
+						<div class="col-md-6 text-center">
+							<h3>Lorem Ipsum</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ligula ut augue scelerisque venenatis.</p>
+						</div>
+						<div class="col-md-6 text-center">
+							<h3>Lorem Ipsum</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ligula ut augue scelerisque venenatis.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="layout-news">
+				<div class="container editable" id="item-3">
+					<div class="row">
+						<div class="col-md-6">
+							<h2>Maecenas tincidunt sem quis rutrum</h2>
+							<p>Mauris in porttitor elit. Aenean elementum eleifend quam, in tristique eros auctor porta. Donec et est in tellus blandit feugiat id nec nunc.</p>
+						</div>
+						<div class="col-md-6">
+							<img src="https://editscreen.vercel.app/assets/img/placeholder.jpg" class="img-fluid">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="layout-post">
+				<div id="item-4" class="container editable">
+					<h2>Mauris eleifend ligula</h2>
+					<p>
+						Vivamus in nisi commodo, auctor magna vel, viverra turpis. Quisque dapibus risus nec justo euismod, id fringilla dui lobortis. Mauris vitae semper arcu. Ut ac lorem felis.
+					</p>
+				</div>
+			</section>
+
+		</div>
+	</div>
+
+	<template id="features" data-name="Features" data-insert="main">
+		<section class="layout-features">
+			<div class="container editable" id="item-2">
+				<div class="row">
+					<div class="col-md-6 text-center">
+						<h3>Lorem Ipsum</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ligula ut augue scelerisque venenatis.</p>
+					</div>
+					<div class="col-md-6 text-center">
+						<h3>Lorem Ipsum</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend ligula ut augue scelerisque venenatis.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="news" data-name="News" data-insert="main">
+		<section class="layout-news">
+			<div class="container editable" id="item-3">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Maecenas tincidunt sem quis rutrum</h2>
+						<p>Mauris in porttitor elit. Aenean elementum eleifend quam, in tristique eros auctor porta. Donec et est in tellus blandit feugiat id nec nunc.</p>
+					</div>
+					<div class="col-md-6">
+						<img src="https://editscreen.vercel.app/assets/img/placeholder.jpg" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section>
+	</template>
+
+	<template id="post" data-name="Post" data-insert="main">
+		<section class="layout-post">
+			<div id="item-4" class="container editable">
+				<h2>Mauris eleifend ligula</h2>
+				Vivamus in nisi commodo, auctor magna vel, viverra turpis. Quisque dapibus risus nec justo euismod, id fringilla dui lobortis. Mauris vitae semper arcu. Ut ac lorem felis.
+			</div>
+		</section>
+	</template>
+
+
+</body>
+
+</html>

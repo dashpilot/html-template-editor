@@ -1,0 +1,82 @@
+:root {
+--deckgo-inline-editor-position: fixed;
+}
+
+#dock{
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 150px);
+  width: 300px;
+  text-align: center;
+}
+#dock img{
+  margin: 5px;
+  width: 60px;
+  transition: all .2s ease-in-out;
+}
+#dock img:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#save{
+  width: 70px !important;
+}
+.pane{
+  width: 300px;
+  height: 100%;
+  top: 0;
+  position: fixed;
+  background-color: white;
+  border-right: 1px solid #DDD;
+  box-shadow: 0px 3px 15px rgba(0,0,0,0.1);
+}
+.pane-left{
+	  left: 0px;
+}
+.pane-right{
+	right: 0;
+}
+.slide-in{
+  transition: .5s;
+  left: 0;
+}
+.slide-out{
+  transition: .5s;
+  left: -320px;
+}
+.close-it{
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  float: right;
+  margin: 10px;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.close-it:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+.wdgt-content{
+  padding: 10px;
+  margin-top: 35px;
+}
+a.box{
+  display: block;
+  padding: 15px;
+  border: 1px solid #DDD;
+  margin-top: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  color: black;
+}
+a.box:hover{
+  background-color: #EEEEEE;
+  cursor: pointer;
+}
+.wdgt-title{
+	float: left;
+	padding: 10px;
+}
